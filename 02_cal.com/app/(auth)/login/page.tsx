@@ -20,7 +20,6 @@ const Login = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Submitting login for:", value.email);
 
     try {
       setLoading(true);
@@ -29,17 +28,15 @@ const Login = () => {
         password: value.password,
       });
 
-      console.log("Login response:", response.status, response.data);
 
       if (response.status === 200 || response.status === 201 || response.data?.success) {
         toast.success("Logged in successfully!");
-        // Small delay so you can see the success toast before navigating
+        // Small delay
         setTimeout(() => {
           router.push("/profile");
         }, 800);
       }
     } catch (error: unknown) {
-      console.error("Login error:", error);
       if (axios.isAxiosError(error)) {
         const backendError =
           error.response?.data?.error ||
@@ -103,7 +100,7 @@ const Login = () => {
 
         <p className="text-sm text-zinc-400 text-center mt-4">
           Don&apos;t have an account?{" "}
-          <Link href="/signup" className="text-blue-400 hover:underline">
+          <Link href="/signin" className="text-blue-400 hover:underline">
             Sign up
           </Link>
         </p>

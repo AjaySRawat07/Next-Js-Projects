@@ -9,7 +9,7 @@ const connection: ConnectionObject = {};
 
 async function dbConnect(): Promise<void> {
     if (connection.isConnected) {
-        console.log("Mongo is already connected");
+        console.log("DB is already connected");
         return;
     }
 
@@ -18,7 +18,6 @@ async function dbConnect(): Promise<void> {
         const db = await mongoose.connect(process.env.MONGODB_URI || "", {});
 
         connection.isConnected = db.connections[0].readyState;
-
         console.log(`Connected to MongoDB : ${db.connection.host}`);
 
     } catch (error) {

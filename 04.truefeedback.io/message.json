@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Design Feedback",
+    "content": "The new UI is super clean and minimal. Really love the dark mode!",
+    "received": "10m ago"
+  },
+  {
+    "title": "Anonymous Question",
+    "content": "What advice would you give to someone just starting in tech?",
+    "received": "1h ago"
+  },
+  {
+    "title": "Team Appreciation",
+    "content": "Thanks for always helping the team debug complex issues!",
+    "received": "3h ago"
+  },
+  {
+    "title": "Feature Request",
+    "content": "Would love an option to export our feedback messages to CSV!",
+    "received": "5h ago"
+  },
+  {
+    "title": "Encouragement",
+    "content": "Keep shipping! Your consistency inspires the whole team.",
+    "received": "1d ago"
+  }
+]

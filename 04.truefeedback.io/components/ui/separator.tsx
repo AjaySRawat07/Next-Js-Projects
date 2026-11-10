@@ -1,0 +1,25 @@
+import * as React from "react";
+import { cn } from "@/lib/utils";
+
+function Separator({
+  className,
+  orientation = "horizontal",
+  ...props
+}: React.HTMLAttributes<HTMLDivElement> & {
+  orientation?: "horizontal" | "vertical";
+}) {
+  return (
+    <div
+      role="none"
+      className={cn(
+        "shrink-0 bg-neutral-200 dark:bg-neutral-800 transition-colors",
+        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
+export { Separator };
+
